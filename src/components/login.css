@@ -1,0 +1,54 @@
+:root {
+  --color1: rgba(254, 108, 198);
+  --color2: rgba(119, 114, 241);
+  --color3: rgba(252, 220, 243);
+}
+
+body {
+  background-image: linear-gradient(to right, rgba(254, 223, 237), rgba(211, 189, 254));
+  overflow: hidden;
+}
+
+.auth-container {
+  background-color: rgba(255, 244, 252);
+  width: 400px;
+  margin: 50vh auto auto;
+  transform: translateY(-50%);
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 0.25rem solid var(--color3);
+  text-align: center;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.05);
+}
+
+.auth-container input{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1.15rem;
+  border-radius: 2rem;
+  border: 0.125rem solid var(--color3);
+  margin: 0.75rem 0;
+  background-color: rgba(255, 240, 245);
+}
+
+.auth-container input[type="submit"]{
+  border: none;
+  cursor: pointer;
+  color: white;
+  background-image: linear-gradient(to right, var(--color1), var(--color2));
+  font-size: 1.25rem;
+  padding: 0.75rem;
+  box-shadow: 0 4px 15px rgba(209, 20, 20, 0.25);
+}
+
+.auth-container a {
+  text-decoration: none;
+  color: var(--color1);
+}
+
+.auth-container h2 {
+  background: linear-gradient(to right, var(--color1), var(--color2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
