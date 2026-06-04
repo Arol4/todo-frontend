@@ -1,10 +1,21 @@
+:root {
+  --color1: rgba(254, 108, 198);
+  --color2: rgba(119, 114, 241);
+  --color3: rgba(252, 220, 243);
+}
+
+h1 {
+  color: var(--color1);
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
-  background-color: #333;
+  padding: 5px 30px;
+  background-image: linear-gradient(to right, var(--color3), var(--color2));
   color: white;
+  box-shadow: 0 4px 15px rgba(209, 20, 20, 0.25);
 }
 .navbar a {
   color: white;
@@ -16,6 +27,17 @@
   color: white;
   border: none;
   padding: 8px 15px;
-  border-radius: 4px;
+  border-radius: 10px;
   cursor: pointer;
+}
+
+.logo {
+  width: 30px;
+  margin: 0px;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
