@@ -1,37 +1,207 @@
-.todo-container {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 20px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-.add-todo-form {
+body {
   display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
+  flex-direction: column;
+  height: 100vh;
 }
-.add-todo-form input {
+.todo-container {
+  background-color: hsl(316, 100%, 98%);
+  z-index: 1;
   flex: 1;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  text-align: center;
+  padding: 75px 20px 10px 20px;
 }
-.add-todo-form button {
-  padding: 10px 20px;
-  background: #2ecc71;
-  color: white;
+
+.todo-container h2{
+  font-size:xx-large;
+  color: hsl(330, 100%, 51%);
+  margin: 0 0 30px;
+}
+#add-todo-btn {
+  background-image: linear-gradient(to right, var(--color1), var(--color2));
   border: none;
-  border-radius: 4px;
+  color: white;
+  font-size: large;
+  padding: 10px 20px;
+  border-radius: 30px;
   cursor: pointer;
+  margin-bottom: 20px;
 }
 .todo-list {
   list-style: none;
-  padding: 0;
+  padding: 5px 0 0 0;
+  margin: 0 150px;
+  text-align: center;
+  height: 300px;
+  overflow-y: scroll;
+  background-color: hsl(316, 100%, 90%);
 }
+
+.todo-list li:first-child {
+  border-top: 5px solid hsl(330, 100%, 51%);
+}
+
+.todo-list li:last-child {
+  border-bottom: 5px solid hsl(330, 100%, 51%);
+}
+
 .todo-item {
   display: flex;
   justify-content: space-between;
-  padding: 12px;
-  border-bottom: 1px solid #eee;
+  padding: 15px;
+  background-color: white;
+  border-radius: 15px;
+  border-left: 7px solid hsl(330, 100%, 51%);
+  font-size: large;
+  font-weight: 500;
+  width: 900px;
+  box-shadow: 0 4px 15px 0 rgba(185, 189, 189, 0.25);
+  margin: 10px auto;
+}
+.fas {
+  margin-right: 10px;
+}
+.actions button {
+  border: none;
+  background-color: white;
+  color: gray;
+  margin: 0px;
+  cursor: pointer;
+}
+
+.actions button:first-child:hover {
+  color: blue;
+}
+.actions button:last-child:hover {
+  color: red;
+}
+
+#createTodo::backdrop{
+  backdrop-filter: blur(5px);
+  background-color: hsl(330 100% 51% /0.1);
+}
+
+#createTodo {
+  border-radius: 20px;
+  border: 0.125rem solid hsl(347, 57%, 85%);
+  background-color: hsl(340, 100%, 97%);
+  padding: 0;
+}
+
+#createTodo span {
+  color: hsl(330, 100%, 51%);
+  font-size: large;
+  font-weight: 500;
+}
+
+#createTodo span::after {
+  content:" 🌟";
+}
+
+#createTodo input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.75rem;
+  border-radius: 2rem;
+  border: 0.125rem solid hsl(347, 57%, 85%);
+}
+.modal-content-create {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px 15px 15px 15px;
+}
+.add-todo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#createActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#createActions input {
+  border: none;
+  padding: 10px;
+  width: 47.5%;
+  margin-bottom: 5px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+#createActions input[type="submit"] {
+  background-image: linear-gradient(to right, var(--color1), var(--color2));
+  color: white;
+}
+
+#createActions input[type="reset"] {
+  background-color: hsl(0, 0%, 80%);
+  color: black;
+}
+
+#editTodo {
+  border-radius: 20px;
+  border: 0.125rem solid hsl(347, 57%, 85%);
+  background-color: hsl(340, 100%, 97%);
+  padding: 0;
+}
+
+#editTodo span {
+  color: hsl(330, 100%, 51%);
+  font-size: large;
+  font-weight: 500;
+}
+
+#editTodo span::after {
+  content:" 🌟";
+}
+
+#editTodo input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.75rem;
+  border-radius: 2rem;
+  border: 0.125rem solid hsl(347, 57%, 85%);
+}
+.modal-content-edit {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px 15px 15px 15px;
+}
+.add-todo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#editActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#editActions input {
+  border: none;
+  padding: 10px;
+  width: 47.5%;
+  margin-bottom: 5px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+#editActions input[type="submit"] {
+  background-image: linear-gradient(to right, var(--color1), var(--color2));
+  color: white;
+}
+
+#editActions input[type="reset"] {
+  background-color: hsl(0, 0%, 80%);
+  color: black;
 }

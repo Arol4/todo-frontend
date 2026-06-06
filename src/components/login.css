@@ -1,19 +1,12 @@
-:root {
-  --color1: rgba(254, 108, 198);
-  --color2: rgba(119, 114, 241);
-  --color3: rgba(252, 220, 243);
-}
-
 body {
   background-image: linear-gradient(to right, rgba(254, 223, 237), rgba(211, 189, 254));
-  overflow: hidden;
 }
 
 .auth-container {
+  box-sizing: border-box;
   background-color: rgba(255, 244, 252);
   width: 400px;
-  margin: 50vh auto auto;
-  transform: translateY(-50%);
+  margin: 5vh auto;
   padding: 1rem;
   border-radius: 1rem;
   border: 0.25rem solid var(--color3);
@@ -24,7 +17,7 @@ body {
 .auth-container input{
   width: 100%;
   box-sizing: border-box;
-  padding: 1.15rem;
+  padding: 0.75rem;
   border-radius: 2rem;
   border: 0.125rem solid var(--color3);
   margin: 0.75rem 0;
@@ -43,7 +36,7 @@ body {
 
 .auth-container a {
   text-decoration: none;
-  color: var(--color1);
+  color: hsl(330, 100%, 51%);
 }
 
 .auth-container h2 {
@@ -51,4 +44,9 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.auth-container p {
+  font-size: small;
+  font-weight: bolder;
 }

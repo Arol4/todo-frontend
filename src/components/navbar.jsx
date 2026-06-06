@@ -25,7 +25,7 @@ function Navbar() {
       </div>
       <div className="links">
         <button onClick={handleLogout} className="logout-btn">
-          <icon className="fas fa-sign-out-alt"></icon> &nbsp;Déconnexion
+          <i className="fas fa-sign-out-alt"></i>Déconnexion
         </button>
       </div>
     </nav>
